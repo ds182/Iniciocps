@@ -26,6 +26,7 @@
             padding: 20px;
             font-size: 2rem; /* Aumentar el tamaño de la fuente */
             font-weight: bold;
+            position: relative; /* Para posicionar el botón correctamente */
         }
 
         /* Menú lateral */
@@ -77,9 +78,6 @@
 
         /* Botón para modo oscuro */
         .dark-mode-toggle {
-            position: absolute;
-            top: 20px;
-            right: 20px;
             background-color: #333;
             color: white;
             border: none;
@@ -88,6 +86,10 @@
             cursor: pointer;
             font-size: 1rem;
             transition: background-color 0.3s, color 0.3s;
+            position: absolute;
+            top: 10px; /* Espacio desde la parte superior */
+            right: 10px; /* Espacio desde el lado derecho */
+            z-index: 10; /* Asegura que esté encima de otros elementos */
         }
 
         .dark-mode-toggle:hover {
@@ -110,7 +112,7 @@
 
         /* Estilos para imágenes de fondo y contenedor */
         .welcome-container {
-            background-image: url(''); /* Imagen de fondo */
+            background-image: url('https://images.unsplash.com/photo-1517242021034-2c25b0e6ff49?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGVuZ2xpc2h8ZW58MHx8fHwxNjg3MTU1MjI0&ixlib=rb-1.2.1&q=80&w=1080'); /* Imagen de fondo de alta calidad */
             background-size: cover;
             background-position: center;
             color: white;
@@ -133,15 +135,29 @@
                 margin-left: 0; /* Sin margen en pantallas pequeñas */
                 padding-top: 20px; /* Ajuste en padding para pantallas pequeñas */
             }
+
+            .header {
+                font-size: 1.5rem; /* Ajustar tamaño de fuente para móviles */
+            }
+
+            .dark-mode-toggle {
+                position: fixed; /* Mantener el botón en la parte superior derecha */
+                top: 10px; 
+                right: 10px;
+                z-index: 10; /* Asegura que esté encima de otros elementos */
+            }
+
+            h1 {
+                font-size: 2rem; /* Ajustar tamaño del título principal en móviles */
+            }
         }
     </style>
 </head>
 <body>
     <div class="header">
         ¡Bienvenido a English School CPS!
+        <button class="dark-mode-toggle" id="darkModeToggle">🌙 Modo Oscuro</button>
     </div>
-
-    <button class="dark-mode-toggle" id="darkModeToggle">🌙 Modo Oscuro</button>
 
     <!-- Menú lateral -->
     <div class="sidebar">
