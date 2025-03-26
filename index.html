@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrusel Unificado</title>
+    <title>Carrusel Vertical</title>
     <style>
         body {
             font-family: 'Helvetica Neue', sans-serif;
-            background-color: #121212; /* Fondo oscuro */
-            color: #ffffff; /* Texto claro */
+            background-color: #121212;
+            color: #ffffff;
             margin: 0;
             padding: 0;
-            overflow-x: hidden; /* Evita el scroll horizontal en el body */
+            overflow-x: hidden;
         }
         header {
-            background-image: url('https://i.ibb.co/sCFRJ9t/Dise-o-sin-t-tulo-11.png'); /* Aquí coloca el link de tu imagen de fondo */
+            background-image: url('https://i.ibb.co/sCFRJ9t/Dise-o-sin-t-tulo-11.png');
             background-size: cover;
             background-position: center;
             color: #ffffff;
@@ -22,87 +22,69 @@
             text-align: center;
         }
         h1 {
-            background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+            background-color: rgba(0, 0, 0, 0.6);
             display: inline-block;
             padding: 10px 20px;
             border-radius: 10px;
         }
         .container {
-            max-width: 1200px;
+            max-width: 600px;
             margin: 0 auto;
             padding: 20px;
         }
         .carousel {
-            display: flex; /* Flexbox para disposición horizontal */
-            overflow-x: auto; /* Permite desplazamiento horizontal */
-            scroll-snap-type: x mandatory; /* Habilita el efecto de "snap" */
-            scrollbar-width: thin; /* Barra de desplazamiento delgada */
-            padding-bottom: 10px; /* Espacio para la barra de desplazamiento */
-        }
-        .carousel::-webkit-scrollbar {
-            height: 8px; /* Altura de la barra de desplazamiento */
-        }
-        .carousel::-webkit-scrollbar-thumb {
-            background: #888; /* Color de la barra de desplazamiento */
-            border-radius: 10px; /* Bordes redondeados de la barra */
-        }
-        .carousel::-webkit-scrollbar-thumb:hover {
-            background: #555; /* Color de la barra al pasar el ratón */
+            display: block; /* Cambiado a bloque para apilar elementos */
+            padding-bottom: 20px;
         }
         .module {
-            flex: 0 0 auto; /* Evita que los módulos se compriman */
-            width: 300px; /* Ancho fijo de cada módulo */
-            margin: 20px; /* Espaciado entre módulos */
-            background-color: #2a2a2a; /* Color de fondo del módulo */
+            width: 100%;
+            margin-bottom: 20px; /* Espaciado entre módulos */
+            background-color: #2a2a2a;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para profundidad */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
             padding: 20px;
             text-align: center;
-            scroll-snap-align: start; /* Efecto de "snap" */
             transition: transform 0.2s ease;
         }
         .module:hover {
-            transform: scale(1.05); /* Efecto hover: agrandar ligeramente */
+            transform: scale(1.05);
         }
         .module img {
-            width: 100%; /* La imagen ocupa todo el ancho del módulo */
-            border-radius: 10px; /* Bordes redondeados */
+            width: 100%;
+            border-radius: 10px;
         }
         .module h3 {
             margin-top: 15px;
-            color: #ffcc00; /* Color del título */
+            color: #ffcc00;
         }
         .module a {
-            background-color: rgba(255, 204, 0, 0.8); /* Fondo amarillo semitransparente */
-            color: #121212; /* Texto oscuro */
+            background-color: rgba(255, 204, 0, 0.8);
+            color: #121212;
             padding: 10px;
             border-radius: 5px;
-            text-decoration: none; /* Sin subrayado */
+            text-decoration: none;
             font-weight: bold;
             display: inline-block;
             margin-top: 10px;
         }
         .module a:hover {
-            background-color: rgba(255, 204, 0, 1); /* Efecto hover: fondo más intenso */
+            background-color: rgba(255, 204, 0, 1);
         }
         h2 {
             text-align: center;
-            padding-left: 20px;
             color: #ffcc00;
         }
         footer {
-            background-color: #2a2a2a; /* Color de fondo del pie de página */
+            background-color: #2a2a2a;
             text-align: center;
             padding: 20px;
-            border-top: 1px solid #ffcc00; /* Línea superior */
-            margin-top: 20px; /* Margen superior para separar del contenido */
-            color: #ffffff; /* Texto claro */
+            border-top: 1px solid #ffcc00;
+            margin-top: 20px;
+            color: #ffffff;
         }
-        /* Responsividad */
         @media (max-width: 768px) {
             .module {
-                width: 90%; /* Módulos ocupan el 90% del ancho en pantallas pequeñas */
-                max-width: 300px; /* Mantiene el ancho máximo de los módulos */
+                width: 100%;
             }
             header {
                 padding: 30px 0;
@@ -113,52 +95,42 @@
 <body>
 
 <header>
-    <h1>Modulo Gratuito.</h1>
+    <h1>Módulo Gratuito</h1>
 </header>
 
 <div class="container">
     <h2>Recursos Interactivos</h2>
     <div class="carousel">
-        <!-- Apunte -->
-        <div class="module" id="apunte1">
+        <div class="module">
             <img src="https://i.ibb.co/vXtHdJw/Dise-o-sin-t-tulo-12.png" alt="Apunte 1">
             <h3>APUNTE</h3>
             <p>Días de la semana en inglés.</p>
-            <a href="https://ds182.github.io/Clase-1/" id="linkApunte1">Acceder</a>
+            <a href="https://ds182.github.io/Clase-1/">Acceder</a>
         </div>
-
-        <!-- Canción -->
-        <div class="module" id="cancion1">
+        <div class="module">
             <img src="https://i.ibb.co/6X2cySF/Dise-o-sin-t-tulo-14.png" alt="Canción 1">
             <h3>CANCIÓN</h3>
             <p>Escucha y completa.</p>
-            <a href="https://ds182.github.io/cancion1/" id="linkCancion1">Escuchar</a>
+            <a href="https://ds182.github.io/cancion1/">Escuchar</a>
         </div>
-
-        <!-- Video -->
-        <div class="module" id="video1">
+        <div class="module">
             <img src="https://i.ibb.co/XtmGyt7/Dise-o-sin-t-tulo-15.png" alt="Video 1">
             <h3>VIDEO</h3>
             <p>Observa el video.</p>
-            <a href="https://ds182.github.io/video2/" id="linkVideo1">Ver Video</a>
+            <a href="https://ds182.github.io/video2/">Ver Video</a>
         </div>
-
-        <!-- Juego -->
-        <div class="module" id="juego1">
+        <div class="module">
             <img src="https://i.ibb.co/bRYn9Jw/Dise-o-sin-t-tulo-13.png" alt="Juego 1">
             <h3>JUEGO</h3>
-            <p>Juega y Diviertete Aprendiendo.</p>
+            <p>Juega y diviértete aprendiendo.</p>
             <a href="https://ds182.github.io/Juego-1/">Jugar Ahora</a>
         </div>
-
-        <!-- Anuncio Medida de los anuncios 300x150-->
-        <div class="module" id="anuncio1">
+        <div class="module">
             <img src="https://i.ibb.co/z4fKng9/Dise-o-sin-t-tulo-16.png" alt="Anuncio 1">
             <h3>ANUNCIO ESPECIAL</h3>
             <p>"Tú eres el dueño de tu destino; cada decisión cuenta."</p>
-            <a href="#" id="linkAnuncio1">Más Información</a>
+            <a href="#">Más Información</a>
         </div>
-
     </div>
 </div>
 
